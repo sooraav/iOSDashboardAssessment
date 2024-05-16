@@ -57,6 +57,7 @@
 		21E69BB62BF6710000297C45 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				21E69BC32BF69C9F00297C45 /* Extensions */,
 				21E69BC12BF68D2800297C45 /* DataFetch.swift */,
 			);
 			path = Infrastructure;
@@ -78,6 +79,13 @@
 				21E69BBD2BF6770E00297C45 /* GreetingsView.swift */,
 			);
 			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		21E69BC32BF69C9F00297C45 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3AC597492BF4D05C0092606C = {
