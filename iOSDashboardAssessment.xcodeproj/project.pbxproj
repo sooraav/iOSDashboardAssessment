@@ -17,6 +17,7 @@
 		21E69BCC2BF8BAD600297C45 /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BCB2BF8BAD600297C45 /* JobView.swift */; };
 		21E69BCE2BF8BAE400297C45 /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BCD2BF8BAE400297C45 /* JobViewModel.swift */; };
 		21E69BD02BF8BAF000297C45 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BCF2BF8BAF000297C45 /* JobModel.swift */; };
+		21E69BD22BF8BF2800297C45 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BD12BF8BF2700297C45 /* CustomSegmentedControl.swift */; };
 		3AC597562BF4D05C0092606C /* iOSDashboardAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */; };
 		3AC597582BF4D05C0092606C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC597572BF4D05C0092606C /* ContentView.swift */; };
 		3AC5975A2BF4D05D0092606C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC597592BF4D05D0092606C /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		21E69BCB2BF8BAD600297C45 /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
 		21E69BCD2BF8BAE400297C45 /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
 		21E69BCF2BF8BAF000297C45 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		21E69BD12BF8BF2700297C45 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		3AC597522BF4D05C0092606C /* iOSDashboardAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDashboardAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDashboardAssessmentApp.swift; sourceTree = "<group>"; };
 		3AC597572BF4D05C0092606C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				21E69BBD2BF6770E00297C45 /* GreetingsView.swift */,
 				21E69BC62BF7BBF600297C45 /* JobStatsView.swift */,
 				21E69BC82BF7BC3200297C45 /* HorizontalSplitBarView.swift */,
+				21E69BD12BF8BF2700297C45 /* CustomSegmentedControl.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				21E69BD02BF8BAF000297C45 /* JobModel.swift in Sources */,
 				21E69BC02BF67C2C00297C45 /* HomeModel.swift in Sources */,
 				21E69BBE2BF6770E00297C45 /* GreetingsView.swift in Sources */,
+				21E69BD22BF8BF2800297C45 /* CustomSegmentedControl.swift in Sources */,
 				3AC597562BF4D05C0092606C /* iOSDashboardAssessmentApp.swift in Sources */,
 				21E69BC22BF68D2800297C45 /* DataFetch.swift in Sources */,
 				21E69BCE2BF8BAE400297C45 /* JobViewModel.swift in Sources */,

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import SampleData
+
+struct SegmentModel {
+    
+    var status: JobStatus
+    var items: [JobApiModel]
+    var title: String
+}

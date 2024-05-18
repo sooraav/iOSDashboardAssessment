@@ -18,7 +18,7 @@ struct HomeView <Model>: View where Model: HomeInterface {
                 }
                 ForEach(viewModel.statViews) { statsModel in
                     NavigationLink()  {
-                        JobView()
+                        JobView(viewModel: JobViewModel(statsModel: statsModel, jobByState: viewModel.jobByStatus))
                     }label: {
                       
                         StatsView(model: statsModel)

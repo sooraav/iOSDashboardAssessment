@@ -13,6 +13,7 @@ import SwiftUI
 protocol HomeInterface: ObservableObject {
     var greeting: GreetingsModel? { get set }
     var statViews: [StatsModel] { get set }
+    var jobByStatus: [JobStatus: [JobApiModel]] { get set }
     init(dataFetcher: DataFetchable)
     func getData()
 }
