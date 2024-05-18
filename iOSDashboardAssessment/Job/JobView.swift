@@ -10,10 +10,12 @@ import SwiftUI
 struct JobView<Model>: View where Model: JobInterface {
     
     @StateObject var viewModel: Model
-
+    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
+                Divider()
                 HorizontalSplitBarView(model: viewModel.statsModel)
                 Divider()
                 if let selected = viewModel.selected {
@@ -34,6 +36,24 @@ struct JobView<Model>: View where Model: JobInterface {
         .onAppear {
             viewModel.getSegments()
         }
-        .navigationTitle("Job")
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem (placement: .navigationBarLeading)  {
+                HStack {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }, label: {
+                        Image(systemName: "arrow.left")
+                            .bold()
+                            .foregroundColor(.black)
+                    })
+                    
+                    Text ("Jobs")
+                        .bold()
+                        .foregroundStyle(.black)
+                }
+                
+            }
+        }
     }
 }

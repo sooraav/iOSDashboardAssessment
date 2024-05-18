@@ -12,27 +12,40 @@ struct HomeView <Model>: View where Model: HomeInterface {
     @StateObject var viewModel: Model
     var body: some View {
         NavigationStack {
-            VStack {
-                if let greeting = viewModel.greeting {
-                    GreetingsView(model: greeting)
-                }
-                ForEach(viewModel.statViews) { statsModel in
-                    NavigationLink()  {
-                        JobView(viewModel: JobViewModel(statsModel: statsModel, jobByState: viewModel.jobByStatus))
-                    }label: {
-                      
-                        StatsView(model: statsModel)
+            NavigationView {
+                    VStack {
+                        if let greeting = viewModel.greeting {
+                            GreetingsView(model: greeting)
+                        }
+                        ForEach(viewModel.statViews) { statsModel in
+                            NavigationLink()  {
+                                JobView(viewModel: JobViewModel(statsModel: statsModel, jobByState: viewModel.jobByStatus))
+                            }label: {
+                                
+                                StatsView(model: statsModel)
+                            }
+                        }
+                        Spacer()
+                    }
+                    .padding(20)
+                    
+                
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    VStack {
+                        Text("Dashboard")
+                            .bold()
                     }
                 }
             }
-            .padding(20)
-            
+            .toolbarBackground(.white)
+            .toolbarColorScheme(.dark, for: .navigationBar)
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                viewModel.getData()
+            }
         }
-        .onAppear {
-            viewModel.getData()
-        }
-        .navigationTitle("Dashboard")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 /*
