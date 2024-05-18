@@ -17,7 +17,12 @@ struct HomeView <Model>: View where Model: HomeInterface {
                     GreetingsView(model: greeting)
                 }
                 ForEach(viewModel.statViews) { statsModel in
-                    StatsView(model: statsModel)
+                    NavigationLink()  {
+                        JobView()
+                    }label: {
+                      
+                        StatsView(model: statsModel)
+                    }
                 }
             }
             .padding(20)

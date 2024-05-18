@@ -11,19 +11,26 @@ struct HorizontalSplitBarView: View {
     
     let model: StatsModel
     var body: some View {
-        GeometryReader { geometry in
-                    HStack(spacing: 0) {
-                        ForEach(model.barInfo.sorted(by: {
-                            $0.count ?? 0 > $1.count ?? 0
-                        }), id: \.name) { bar in
-                            Rectangle()
-                                .fill(bar.colour)
-                                .frame(width: CGFloat(bar.count ?? 0) * geometry.size.width / CGFloat(model.total))
-                        }
+        VStack {
+            HStack {
+                Text(model.totalText)
+                Spacer()
+                Text(model.inProgressText)
+            }
+            GeometryReader { geometry in
+                HStack(spacing: 0) {
+                    ForEach(model.barInfo.sorted(by: {
+                        $0.count ?? 0 > $1.count ?? 0
+                    }), id: \.name) { bar in
+                        Rectangle()
+                            .fill(bar.colour)
+                            .frame(width: CGFloat(bar.count ?? 0) * geometry.size.width / CGFloat(model.total))
                     }
                 }
-                .frame(height: 20)
-                .cornerRadius(5)
+            }
+            .frame(height: 20)
+            .cornerRadius(5)
+        }
     }
 }
 

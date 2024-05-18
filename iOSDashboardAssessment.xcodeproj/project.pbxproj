@@ -14,6 +14,9 @@
 		21E69BC22BF68D2800297C45 /* DataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BC12BF68D2800297C45 /* DataFetch.swift */; };
 		21E69BC72BF7BBF600297C45 /* JobStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BC62BF7BBF600297C45 /* JobStatsView.swift */; };
 		21E69BC92BF7BC3200297C45 /* HorizontalSplitBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BC82BF7BC3200297C45 /* HorizontalSplitBarView.swift */; };
+		21E69BCC2BF8BAD600297C45 /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BCB2BF8BAD600297C45 /* JobView.swift */; };
+		21E69BCE2BF8BAE400297C45 /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BCD2BF8BAE400297C45 /* JobViewModel.swift */; };
+		21E69BD02BF8BAF000297C45 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BCF2BF8BAF000297C45 /* JobModel.swift */; };
 		3AC597562BF4D05C0092606C /* iOSDashboardAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */; };
 		3AC597582BF4D05C0092606C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC597572BF4D05C0092606C /* ContentView.swift */; };
 		3AC5975A2BF4D05D0092606C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC597592BF4D05D0092606C /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 		21E69BC12BF68D2800297C45 /* DataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetch.swift; sourceTree = "<group>"; };
 		21E69BC62BF7BBF600297C45 /* JobStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobStatsView.swift; sourceTree = "<group>"; };
 		21E69BC82BF7BC3200297C45 /* HorizontalSplitBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSplitBarView.swift; sourceTree = "<group>"; };
+		21E69BCB2BF8BAD600297C45 /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
+		21E69BCD2BF8BAE400297C45 /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
+		21E69BCF2BF8BAF000297C45 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		3AC597522BF4D05C0092606C /* iOSDashboardAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDashboardAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDashboardAssessmentApp.swift; sourceTree = "<group>"; };
 		3AC597572BF4D05C0092606C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +100,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		21E69BCA2BF8BAB600297C45 /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				21E69BCB2BF8BAD600297C45 /* JobView.swift */,
+				21E69BCD2BF8BAE400297C45 /* JobViewModel.swift */,
+				21E69BCF2BF8BAF000297C45 /* JobModel.swift */,
+			);
+			path = Job;
+			sourceTree = "<group>";
+		};
 		3AC597492BF4D05C0092606C = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +134,7 @@
 				3AC597572BF4D05C0092606C /* ContentView.swift */,
 				21E69BB62BF6710000297C45 /* Infrastructure */,
 				21E69BB52BF670EA00297C45 /* InterFace */,
+				21E69BCA2BF8BAB600297C45 /* Job */,
 				3AC597592BF4D05D0092606C /* Assets.xcassets */,
 				3AC5975B2BF4D05D0092606C /* Preview Content */,
 			);
@@ -217,10 +234,13 @@
 				3AC597582BF4D05C0092606C /* ContentView.swift in Sources */,
 				21E69BC72BF7BBF600297C45 /* JobStatsView.swift in Sources */,
 				21E69BC92BF7BC3200297C45 /* HorizontalSplitBarView.swift in Sources */,
+				21E69BCC2BF8BAD600297C45 /* JobView.swift in Sources */,
+				21E69BD02BF8BAF000297C45 /* JobModel.swift in Sources */,
 				21E69BC02BF67C2C00297C45 /* HomeModel.swift in Sources */,
 				21E69BBE2BF6770E00297C45 /* GreetingsView.swift in Sources */,
 				3AC597562BF4D05C0092606C /* iOSDashboardAssessmentApp.swift in Sources */,
 				21E69BC22BF68D2800297C45 /* DataFetch.swift in Sources */,
+				21E69BCE2BF8BAE400297C45 /* JobViewModel.swift in Sources */,
 				21E69BBB2BF6729100297C45 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
