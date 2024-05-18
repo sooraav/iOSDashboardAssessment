@@ -78,6 +78,8 @@ extension HomeViewModel {
     
     private func convertModel<T: Translatable, U>(itemsByStatus: [T: [U]], type: StatType) -> StatsModel {
         var barModel = [BarModel]()
+        var total = 0
+        var statusCounts = [T: Int]()
         
         for status in T.allCases {
             let (name, color) = status.getTranslation()
@@ -88,8 +90,14 @@ extension HomeViewModel {
                     colour: color
                 )
             )
+            total += (itemsByStatus[status]?.count ?? 0)
+            
         }
-        return StatsModel(barInfo: barModel, type: type)
+        let title = type == .job ? "Job Stats": "Invoice Stats"
+        let totalText =  type == .job ? "\(total) Jobs": "Total Value($ \(total))"
+        let inProgress = type == .job ? "\(itemsByStatus[JobStatus.completed as! T]?.count ?? 0) of \(total) completed": "\((itemsByStatus[InvoiceStatus.paid as! T]?.count ?? 0)) collected"
+        
+        return StatsModel(barInfo: barModel, title: title, total: total, totalText: totalText, inProgressText: inProgress)
     }
     
     private func getCurrentDate() -> String {
@@ -119,15 +127,15 @@ extension JobStatus: Translatable {
         switch self {
             
         case .yetToStart:
-            return ("Yet to Start", .purple)
+            return ("Yet to Start (%d)", .purple)
         case .inProgress:
-            return ("In-Progress", .cyan)
+            return ("In-Progress (%d)", .cyan)
         case .canceled:
-            return ("Cancelled", .yellow)
+            return ("Cancelled (%d)", .yellow)
         case .completed:
-            return ("Completed", .green)
+            return ("Completed (%d)", .green)
         case .incomplete:
-            return ("In-Complete", .red)
+            return ("In-Complete (%d)", .red)
         }
     }
 }

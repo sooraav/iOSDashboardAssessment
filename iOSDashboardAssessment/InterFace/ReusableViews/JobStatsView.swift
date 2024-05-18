@@ -17,7 +17,7 @@ struct StatsView: View {
     var body: some View {
        
         VStack(alignment: .leading){
-            Text(model.type == .job ? "Job Stats": "InVoiceStats")
+            Text(model.title)
                 .padding(.leading, 10)
             Divider()
             
@@ -25,12 +25,11 @@ struct StatsView: View {
         
                 ForEach(model.barInfo, id: \.name) { barInfo in
                     if let count = barInfo.count {
-                        let countText = model.type == .job ? " (\(count))" : " ($\(count))"
                         HStack {
                             barInfo.colour
                                 .frame(width: 20, height: 20)
                                 .cornerRadius(5)
-                            Text(barInfo.name + countText)
+                            Text(String(format: barInfo.name, count))
                             
                         }
                     }
@@ -43,10 +42,11 @@ struct StatsView: View {
     }
 }
 
-let barInfo = [BarModel(name: "Hello", count: 10, colour: .red),
+let barInfo = [BarModel(name: "Hello (%d)", count: 10, colour: .red),
                BarModel(name: "Hi", count: 5, colour: .blue),
                BarModel(name: "Aloha", count: 3, colour: .green)
 ]
+
 #Preview {
-    StatsView(model: StatsModel(barInfo: barInfo, type: .job))
+    StatsView(model: StatsModel(barInfo: barInfo, title: "Job Stats", total: 10, totalText: "total Text", inProgressText: "inProgressText"))
 }

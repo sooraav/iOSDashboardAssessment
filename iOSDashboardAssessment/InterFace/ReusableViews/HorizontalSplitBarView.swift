@@ -8,13 +8,23 @@
 import SwiftUI
 /*
 struct HorizontalSplitBarView: View {
-    let elements: [Int]
     var body: some View {
-        
+        VStack {
+            HStack {
+                Text("title")
+                T
+            }
+            GeometryReader{
+                
+            }
+        }
     }
 }
 
 #Preview {
-    HorizontalSplitBarView()
+    HorizontalSplitBarView(title: "%d jobs", progressText: "%s",  [BarModel(name: "Hello", count: 10, colour: .red),
+                            BarModel(name: "Hi", count: 5, colour: .blue),
+                            BarModel(name: "Aloha", count: 3, colour: .green)
+             ])
 }
 */

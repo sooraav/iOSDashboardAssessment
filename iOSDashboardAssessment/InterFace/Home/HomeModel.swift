@@ -15,7 +15,10 @@ struct GreetingsModel {
 
 struct StatsModel {
     let barInfo: [BarModel]
-    let type: StatType
+    let title: String
+    let total: Int
+    let totalText: String
+    let inProgressText: String
 }
 
 struct BarModel {
