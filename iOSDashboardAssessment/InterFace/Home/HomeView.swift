@@ -16,7 +16,11 @@ struct HomeView <Model>: View where Model: HomeInterface {
                 if let greeting = viewModel.greeting {
                     GreetingsView(model: greeting)
                 }
+                if let statsModel = viewModel.statViews.first {
+                    StatsView(model: statsModel)
+                }
             }
+            .padding(20)
             
         }
         .onAppear {

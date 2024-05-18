@@ -79,7 +79,6 @@ extension HomeViewModel {
     private func convertModel<T: Translatable, U>(itemsByStatus: [T: [U]], type: StatType) -> StatsModel {
         var barModel = [BarModel]()
         var total = 0
-        var statusCounts = [T: Int]()
         
         for status in T.allCases {
             let (name, color) = status.getTranslation()

@@ -9,6 +9,12 @@ import SwiftUI
 
 struct StatsView: View {
     
+    private struct ViewTraits {
+        
+        static let sidePadding: CGFloat = 20.0
+        static let cornerRadius: CGFloat = 8.0
+    }
+    
     let model: StatsModel
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -20,7 +26,7 @@ struct StatsView: View {
             Text(model.title)
                 .padding(.leading, 10)
             Divider()
-            
+            HorizontalSplitBarView(model: model)
             LazyVGrid(columns: columns) {
         
                 ForEach(model.barInfo, id: \.name) { barInfo in
@@ -37,6 +43,12 @@ struct StatsView: View {
                 }
                 
             }
+        }
+        .padding()
+        .clipShape(RoundedRectangle(cornerRadius: ViewTraits.cornerRadius))
+        .overlay {
+            RoundedRectangle(cornerRadius: ViewTraits.cornerRadius)
+                .strokeBorder(Color.black)
         }
         
     }

@@ -38,7 +38,6 @@ struct GreetingsView: View {
             RoundedRectangle(cornerRadius: ViewTraits.cornerRadius)
                 .strokeBorder(Color.black)
         }
-        .padding(20)
     }
 }
 

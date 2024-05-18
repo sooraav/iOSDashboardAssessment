@@ -6,25 +6,27 @@
 //
 
 import SwiftUI
-/*
+
 struct HorizontalSplitBarView: View {
+    
+    let model: StatsModel
     var body: some View {
-        VStack {
-            HStack {
-                Text("title")
-                T
-            }
-            GeometryReader{
-                
-            }
-        }
+        GeometryReader { geometry in
+                    HStack(spacing: 0) {
+                        ForEach(model.barInfo.sorted(by: {
+                            $0.count ?? 0 > $1.count ?? 0
+                        }), id: \.name) { bar in
+                            Rectangle()
+                                .fill(bar.colour)
+                                .frame(width: CGFloat(bar.count ?? 0) * geometry.size.width / CGFloat(model.total))
+                        }
+                    }
+                }
+                .frame(height: 20)
+                .cornerRadius(5)
     }
 }
 
 #Preview {
-    HorizontalSplitBarView(title: "%d jobs", progressText: "%s",  [BarModel(name: "Hello", count: 10, colour: .red),
-                            BarModel(name: "Hi", count: 5, colour: .blue),
-                            BarModel(name: "Aloha", count: 3, colour: .green)
-             ])
+    HorizontalSplitBarView(model: StatsModel(barInfo: barInfo, title: "Job Stats", total: 10, totalText: "total Text", inProgressText: "inProgressText"))
 }
-*/
