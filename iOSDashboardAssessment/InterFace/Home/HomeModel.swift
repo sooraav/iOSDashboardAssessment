@@ -13,7 +13,8 @@ struct GreetingsModel {
     let date: String
 }
 
-struct StatsModel {
+struct StatsModel: Identifiable {
+    let id = UUID()
     let barInfo: [BarModel]
     let title: String
     let total: Int

@@ -53,7 +53,7 @@ extension HomeViewModel: HomeInterface {
                     
                     self.jobByStatus[job.status, default: []].append(job)
                 }
-                self.statViews.append(self.convertModel(itemsByStatus: self.jobByStatus, type: .job))
+                self.statViews.append(getJobStatModel())
             }
             .store(in: &disposables)
         
@@ -68,7 +68,7 @@ extension HomeViewModel: HomeInterface {
                     self.invoiceByStatus[job.status, default: []].append(job)
                 }
                 self.greeting = GreetingsModel(name: value.first?.customerName ?? "Unknown_Name", date: self.getCurrentDate())
-                self.statViews.append(self.convertModel(itemsByStatus: self.invoiceByStatus, type: .amount))
+                self.statViews.append(getInvoiceStatModel())
             }
             .store(in: &disposables)
     }
@@ -76,28 +76,54 @@ extension HomeViewModel: HomeInterface {
 
 extension HomeViewModel {
     
-    private func convertModel<T: Translatable, U>(itemsByStatus: [T: [U]], type: StatType) -> StatsModel {
+    
+    private func getJobStatModel() -> StatsModel {
         var barModel = [BarModel]()
         var total = 0
-        
-        for status in T.allCases {
+        for status in JobStatus.allCases {
             let (name, color) = status.getTranslation()
+            let count = jobByStatus[status]?.count
             barModel.append(
                 BarModel(
                     name: name,
-                    count: itemsByStatus[status]?.count,
+                    count: count,
                     colour: color
                 )
             )
-            total += (itemsByStatus[status]?.count ?? 0)
-            
+            total += count ?? 0
         }
-        let title = type == .job ? "Job Stats": "Invoice Stats"
-        let totalText =  type == .job ? "\(total) Jobs": "Total Value($ \(total))"
-        let inProgress = type == .job ? "\(itemsByStatus[JobStatus.completed as! T]?.count ?? 0) of \(total) completed": "\((itemsByStatus[InvoiceStatus.paid as! T]?.count ?? 0)) collected"
+        
+        let title = "Job Stats"
+        let totalText =  "\(total) Jobs"
+        let inProgress = "\(jobByStatus[JobStatus.completed]?.count ?? 0) of \(total) completed"
         
         return StatsModel(barInfo: barModel, title: title, total: total, totalText: totalText, inProgressText: inProgress)
     }
+    
+    private func getInvoiceStatModel() -> StatsModel {
+        var barModel = [BarModel]()
+        var total = 0
+        for status in InvoiceStatus.allCases {
+            let (name, color) = status.getTranslation()
+            let count = invoiceByStatus[status]?.reduce(0) { $0 + $1.total
+            }
+            barModel.append(
+                BarModel(
+                    name: name,
+                    count: count,
+                    colour: color
+                )
+            )
+            total += count ?? 0
+        }
+        
+        let title = "Invoice Stats"
+        let totalText = "Total Value($ \(total))"
+        let inProgress = "\((invoiceByStatus[InvoiceStatus.paid]?.count ?? 0)) collected"
+        
+        return StatsModel(barInfo: barModel, title: title, total: total, totalText: totalText, inProgressText: inProgress)
+    }
+    
     
     private func getCurrentDate() -> String {
         let dateFormatter = DateFormatter()
@@ -146,13 +172,13 @@ extension InvoiceStatus: Translatable {
         switch self {
             
         case .draft:
-            return ("Draft", .yellow)
+            return ("Draft ($%d)", .yellow)
         case .pending:
-            return ("Pending", .cyan)
+            return ("Pending ($%d)", .cyan)
         case .paid:
-            return ("Paid", .green)
+            return ("Paid ($%d)", .green)
         case .badDebt:
-            return ("Bad Debt", .red)
+            return ("Bad Debt ($%d)", .red)
         }
     }
 }

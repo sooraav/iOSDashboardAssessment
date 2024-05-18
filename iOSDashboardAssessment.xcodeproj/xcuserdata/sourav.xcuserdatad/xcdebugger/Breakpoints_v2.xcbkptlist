@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ADAB04AE-B7E9-490A-9441-9043B34502D6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iOSDashboardAssessment/InterFace/Home/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "convertModel(itemsByStatus:type:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "ADAB04AE-B7E9-490A-9441-9043B34502D6 - e488ec19cb8360e5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOSDashboardAssessment.HomeViewModel.convertModel&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: Swift.Hashable, &#x3c4;_0_0: iOSDashboardAssessment.Translatable&gt;(itemsByStatus: Swift.Dictionary&lt;&#x3c4;_0_0, Swift.Array&lt;&#x3c4;_0_1&gt;&gt;, type: iOSDashboardAssessment.StatType) -&gt; iOSDashboardAssessment.StatsModel"
-                  moduleName = "iOSDashboardAssessment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sourav/Documents/Xcode/iOSDashboardAssessment/iOSDashboardAssessment/InterFace/Home/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "2812">
-               </Location>
-               <Location
-                  uuid = "ADAB04AE-B7E9-490A-9441-9043B34502D6 - e488ec19cb8360e5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOSDashboardAssessment.HomeViewModel.convertModel&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: Swift.Hashable, &#x3c4;_0_0: iOSDashboardAssessment.Translatable&gt;(itemsByStatus: Swift.Dictionary&lt;&#x3c4;_0_0, Swift.Array&lt;&#x3c4;_0_1&gt;&gt;, type: iOSDashboardAssessment.StatType) -&gt; iOSDashboardAssessment.StatsModel"
-                  moduleName = "iOSDashboardAssessment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sourav/Documents/Xcode/iOSDashboardAssessment/iOSDashboardAssessment/InterFace/Home/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "3300">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "33CEB6BA-9208-4ADD-B596-C1EB0B8913C0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -66,6 +18,54 @@
             endingLineNumber = "19"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "33CEB6BA-9208-4ADD-B596-C1EB0B8913C0 - 65f0bd24c9c2858"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (iOSDashboardAssessment.BarModel) -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;iOSDashboardAssessment.BarModel&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;iOSDashboardAssessment.BarModel&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;&gt; in iOSDashboardAssessment.HorizontalSplitBarView.body.getter : some"
+                  moduleName = "iOSDashboardAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sourav/Documents/Xcode/iOSDashboardAssessment/iOSDashboardAssessment/InterFace/ReusableViews/HorizontalSplitBarView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "33CEB6BA-9208-4ADD-B596-C1EB0B8913C0 - fc6b6ff95cfdc795"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (iOSDashboardAssessment.BarModel) -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;iOSDashboardAssessment.BarModel&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;iOSDashboardAssessment.BarModel&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;&gt; in iOSDashboardAssessment.HorizontalSplitBarView.body.getter : some"
+                  moduleName = "iOSDashboardAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sourav/Documents/Xcode/iOSDashboardAssessment/iOSDashboardAssessment/InterFace/ReusableViews/HorizontalSplitBarView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "212">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA69B4EE-0276-4C87-8B26-40BF1E547941"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSDashboardAssessment/InterFace/Home/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "getData()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

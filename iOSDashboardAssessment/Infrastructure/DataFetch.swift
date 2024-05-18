@@ -26,7 +26,7 @@ class DataFetch: DataFetchable {
     
     func getInvoiceList() -> AnyPublisher<[InvoiceApiModel], Never> {
         
-        let invoiceList = SampleData.generateRandomInvoiceList(size: 1)
+        let invoiceList = SampleData.generateRandomInvoiceList(size: 5)
         return Just(invoiceList)
                     .eraseToAnyPublisher()
     }
