@@ -28,6 +28,7 @@ struct HomeView <Model>: View where Model: HomeInterface {
                         Spacer()
                     }
                     .padding(20)
+                    .background(Color(.systemGray6))
                     
                 
             }
@@ -36,12 +37,14 @@ struct HomeView <Model>: View where Model: HomeInterface {
                     VStack {
                         Text("Dashboard")
                             .bold()
+                            .foregroundStyle(.black)
                     }
                 }
             }
-            .toolbarBackground(.white)
             .toolbarColorScheme(.dark, for: .navigationBar)
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarBackground(.white, for: .navigationBar)
             .onAppear {
                 viewModel.getData()
             }

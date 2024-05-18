@@ -32,6 +32,7 @@ struct JobView<Model>: View where Model: JobInterface {
                     }
                 }
             }
+            .background(Color(.systemGray6))
         }
         .onAppear {
             viewModel.getSegments()
@@ -55,5 +56,7 @@ struct JobView<Model>: View where Model: JobInterface {
                 
             }
         }
+        .toolbarBackground(.visible, for: .navigationBar)
+        .toolbarBackground(.white, for: .navigationBar)
     }
 }
