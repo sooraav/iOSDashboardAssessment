@@ -49,6 +49,21 @@
                   endingLineNumber = "19"
                   offsetFromSymbolStart = "212">
                </Location>
+               <Location
+                  uuid = "33CEB6BA-9208-4ADD-B596-C1EB0B8913C0 - 444142baa5f40a14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (iOSDashboardAssessment.BarModel) -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;iOSDashboardAssessment.BarModel&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in closure #2 (SwiftUI.GeometryProxy) -&gt; SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;iOSDashboardAssessment.BarModel&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer, SwiftUI.Text)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt; in iOSDashboardAssessment.HorizontalSplitBarView.body.getter : some"
+                  moduleName = "iOSDashboardAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sourav/Documents/Xcode/iOSDashboardAssessment/iOSDashboardAssessment/InterFace/ReusableViews/HorizontalSplitBarView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "212">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -66,6 +81,38 @@
             endingLineNumber = "72"
             landmarkName = "getData()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EA69B4EE-0276-4C87-8B26-40BF1E547941 - caeb82d8943d8ecf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;SampleData.InvoiceApiModel&gt;) -&gt; () in iOSDashboardAssessment.HomeViewModel.getData() -&gt; ()"
+                  moduleName = "iOSDashboardAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sourav/Documents/Xcode/iOSDashboardAssessment/iOSDashboardAssessment/InterFace/Home/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1752">
+               </Location>
+               <Location
+                  uuid = "EA69B4EE-0276-4C87-8B26-40BF1E547941 - caeb82d8943d8eee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;SampleData.InvoiceApiModel&gt;) -&gt; () in iOSDashboardAssessment.HomeViewModel.getData() -&gt; ()"
+                  moduleName = "iOSDashboardAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sourav/Documents/Xcode/iOSDashboardAssessment/iOSDashboardAssessment/InterFace/Home/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "1760">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

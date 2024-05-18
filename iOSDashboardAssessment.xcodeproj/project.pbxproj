@@ -18,6 +18,7 @@
 		21E69BCE2BF8BAE400297C45 /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BCD2BF8BAE400297C45 /* JobViewModel.swift */; };
 		21E69BD02BF8BAF000297C45 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BCF2BF8BAF000297C45 /* JobModel.swift */; };
 		21E69BD22BF8BF2800297C45 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BD12BF8BF2700297C45 /* CustomSegmentedControl.swift */; };
+		21E69BD42BF8D06E00297C45 /* JobItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BD32BF8D06E00297C45 /* JobItemView.swift */; };
 		3AC597562BF4D05C0092606C /* iOSDashboardAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */; };
 		3AC597582BF4D05C0092606C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC597572BF4D05C0092606C /* ContentView.swift */; };
 		3AC5975A2BF4D05D0092606C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC597592BF4D05D0092606C /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		21E69BCD2BF8BAE400297C45 /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
 		21E69BCF2BF8BAF000297C45 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		21E69BD12BF8BF2700297C45 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		21E69BD32BF8D06E00297C45 /* JobItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobItemView.swift; sourceTree = "<group>"; };
 		3AC597522BF4D05C0092606C /* iOSDashboardAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDashboardAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDashboardAssessmentApp.swift; sourceTree = "<group>"; };
 		3AC597572BF4D05C0092606C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				21E69BC62BF7BBF600297C45 /* JobStatsView.swift */,
 				21E69BC82BF7BC3200297C45 /* HorizontalSplitBarView.swift */,
 				21E69BD12BF8BF2700297C45 /* CustomSegmentedControl.swift */,
+				21E69BD32BF8D06E00297C45 /* JobItemView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				21E69BC22BF68D2800297C45 /* DataFetch.swift in Sources */,
 				21E69BCE2BF8BAE400297C45 /* JobViewModel.swift in Sources */,
 				21E69BBB2BF6729100297C45 /* HomeViewModel.swift in Sources */,
+				21E69BD42BF8D06E00297C45 /* JobItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

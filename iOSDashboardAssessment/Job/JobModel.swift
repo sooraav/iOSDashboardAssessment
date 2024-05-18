@@ -14,3 +14,5 @@ struct SegmentModel {
     var items: [JobApiModel]
     var title: String
 }
+
+

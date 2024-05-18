@@ -13,13 +13,22 @@ struct JobView<Model>: View where Model: JobInterface {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(alignment: .leading) {
                 HorizontalSplitBarView(model: viewModel.statsModel)
                 Divider()
-                ScrollView(.horizontal, showsIndicators: false) {
-                    CustomSegmentedControl(segments: viewModel.segments, selected: $viewModel.selected)
+                if let selected = viewModel.selected {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        CustomSegmentedControl(segments: viewModel.segments, selected: $viewModel.selected)
+                    }
+                    ScrollView {
+                        VStack(alignment: .leading) {
+                            ForEach(selected.items, id: \.id) { item in
+                                
+                                JobItemView(model: item)
+                            }
+                        }
+                    }
                 }
-                Spacer()
             }
         }
         .onAppear {
