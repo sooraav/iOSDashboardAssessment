@@ -12,6 +12,8 @@
 		21E69BBE2BF6770E00297C45 /* GreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BBD2BF6770E00297C45 /* GreetingsView.swift */; };
 		21E69BC02BF67C2C00297C45 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BBF2BF67C2C00297C45 /* HomeModel.swift */; };
 		21E69BC22BF68D2800297C45 /* DataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BC12BF68D2800297C45 /* DataFetch.swift */; };
+		21E69BC72BF7BBF600297C45 /* JobStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BC62BF7BBF600297C45 /* JobStatsView.swift */; };
+		21E69BC92BF7BC3200297C45 /* HorizontalSplitBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BC82BF7BC3200297C45 /* HorizontalSplitBarView.swift */; };
 		3AC597562BF4D05C0092606C /* iOSDashboardAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */; };
 		3AC597582BF4D05C0092606C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC597572BF4D05C0092606C /* ContentView.swift */; };
 		3AC5975A2BF4D05D0092606C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC597592BF4D05D0092606C /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		21E69BBD2BF6770E00297C45 /* GreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsView.swift; sourceTree = "<group>"; };
 		21E69BBF2BF67C2C00297C45 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		21E69BC12BF68D2800297C45 /* DataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetch.swift; sourceTree = "<group>"; };
+		21E69BC62BF7BBF600297C45 /* JobStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobStatsView.swift; sourceTree = "<group>"; };
+		21E69BC82BF7BC3200297C45 /* HorizontalSplitBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSplitBarView.swift; sourceTree = "<group>"; };
 		3AC597522BF4D05C0092606C /* iOSDashboardAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDashboardAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDashboardAssessmentApp.swift; sourceTree = "<group>"; };
 		3AC597572BF4D05C0092606C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				21E69BBD2BF6770E00297C45 /* GreetingsView.swift */,
+				21E69BC62BF7BBF600297C45 /* JobStatsView.swift */,
+				21E69BC82BF7BC3200297C45 /* HorizontalSplitBarView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 			files = (
 				21E69BB92BF6712F00297C45 /* HomeView.swift in Sources */,
 				3AC597582BF4D05C0092606C /* ContentView.swift in Sources */,
+				21E69BC72BF7BBF600297C45 /* JobStatsView.swift in Sources */,
+				21E69BC92BF7BC3200297C45 /* HorizontalSplitBarView.swift in Sources */,
 				21E69BC02BF67C2C00297C45 /* HomeModel.swift in Sources */,
 				21E69BBE2BF6770E00297C45 /* GreetingsView.swift in Sources */,
 				3AC597562BF4D05C0092606C /* iOSDashboardAssessmentApp.swift in Sources */,

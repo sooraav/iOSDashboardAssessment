@@ -8,16 +8,26 @@
 import Foundation
 import Combine
 import SampleData
+import SwiftUI
 
 protocol HomeInterface: ObservableObject {
     var greeting: GreetingsModel? { get set }
+    var statViews: [StatsModel] { get set }
     init(dataFetcher: DataFetchable)
     func getData()
+}
+
+protocol Translatable: CaseIterable {
+    func getTranslation() -> (String, Color)
 }
 
 class HomeViewModel {
     
     @Published var greeting : GreetingsModel?
+    @Published var statViews = [StatsModel]()
+    
+    var jobByStatus = [JobStatus: [JobApiModel]]()
+    var invoiceByStatus = [InvoiceStatus: [InvoiceApiModel]]()
     
     private let datafetcher: DataFetchable
     private var disposables = Set<AnyCancellable>()
@@ -25,6 +35,61 @@ class HomeViewModel {
     required init(dataFetcher: DataFetchable) {
         
         self.datafetcher = dataFetcher
+    }
+}
+
+extension HomeViewModel: HomeInterface {
+   
+    
+    func getData() {
+        
+        datafetcher
+            .getJobList()
+            .receive(on: DispatchQueue.main)
+            .sink {[weak self] value in
+                
+                guard let self else { return }
+                for job in value {
+                    
+                    self.jobByStatus[job.status, default: []].append(job)
+                }
+                self.statViews.append(self.convertModel(itemsByStatus: self.jobByStatus, type: .job))
+            }
+            .store(in: &disposables)
+        
+        
+        datafetcher
+            .getInvoiceList()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] value in
+                guard let self else { return }
+                for job in value {
+                    
+                    self.invoiceByStatus[job.status, default: []].append(job)
+                }
+                self.greeting = GreetingsModel(name: value.first?.customerName ?? "Unknown_Name", date: self.getCurrentDate())
+                self.statViews.append(self.convertModel(itemsByStatus: self.invoiceByStatus, type: .amount))
+            }
+            .store(in: &disposables)
+    }
+}
+
+extension HomeViewModel {
+    
+    private func convertModel<T: Translatable, U>(itemsByStatus: [T: [U]], type: StatType) -> StatsModel {
+        var barModel = [BarModel]()
+        
+        for status in T.allCases {
+            let (name, color) = status.getTranslation()
+            barModel.append(
+                BarModel(
+                    name: name,
+                    count: itemsByStatus[status]?.count,
+                    colour: color
+                )
+            )
+        }
+        return StatsModel(barInfo: barModel, type: type)
     }
     
     private func getCurrentDate() -> String {
@@ -47,27 +112,40 @@ class HomeViewModel {
     }
 }
 
-extension HomeViewModel: HomeInterface {
-   
+extension JobStatus: Translatable {
     
-    func getData() {
+    func getTranslation() -> (String, Color) {
         
-        datafetcher
-            .getJobList()
-            .receive(on: DispatchQueue.main)
-            .sink {[weak self] value in
-                
-            }
-            .store(in: &disposables)
+        switch self {
+            
+        case .yetToStart:
+            return ("Yet to Start", .purple)
+        case .inProgress:
+            return ("In-Progress", .cyan)
+        case .canceled:
+            return ("Cancelled", .yellow)
+        case .completed:
+            return ("Completed", .green)
+        case .incomplete:
+            return ("In-Complete", .red)
+        }
+    }
+}
+
+extension InvoiceStatus: Translatable {
+    
+    func getTranslation() -> (String, Color) {
         
-        
-        datafetcher
-            .getInvoiceList()
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] value in
-                
-                self?.greeting = GreetingsModel(name: value.first?.customerName ?? "Unknown_Name", date: self?.getCurrentDate() ?? "Unknown_Date")
-            }
-            .store(in: &disposables)
+        switch self {
+            
+        case .draft:
+            return ("Draft", .yellow)
+        case .pending:
+            return ("Pending", .cyan)
+        case .paid:
+            return ("Paid", .green)
+        case .badDebt:
+            return ("Bad Debt", .red)
+        }
     }
 }
