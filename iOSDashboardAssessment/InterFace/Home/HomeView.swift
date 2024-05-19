@@ -44,9 +44,6 @@ struct HomeView <Model>: View where Model: HomeInterface {
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(.white, for: .navigationBar)
-            .onAppear {
-                viewModel.getData()
-            }
         }
     }
 }

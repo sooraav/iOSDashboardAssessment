@@ -36,6 +36,7 @@ class HomeViewModel {
     required init(dataFetcher: DataFetchable) {
         
         self.datafetcher = dataFetcher
+        getData()
     }
 }
 

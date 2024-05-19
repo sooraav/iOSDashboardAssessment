@@ -19,14 +19,14 @@ class DataFetch: DataFetchable {
     
     func getJobList() -> AnyPublisher<[JobApiModel], Never> {
         
-        let jobList = SampleData.generateRandomJobList(size: 5)
+        let jobList = SampleData.generateRandomJobList(size: 100)
         return Just(jobList)
                     .eraseToAnyPublisher()
     }
     
     func getInvoiceList() -> AnyPublisher<[InvoiceApiModel], Never> {
         
-        let invoiceList = SampleData.generateRandomInvoiceList(size: 5)
+        let invoiceList = SampleData.generateRandomInvoiceList(size: 50)
         return Just(invoiceList)
                     .eraseToAnyPublisher()
     }
