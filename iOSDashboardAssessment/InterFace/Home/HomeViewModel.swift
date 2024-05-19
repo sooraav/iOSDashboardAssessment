@@ -105,6 +105,7 @@ extension HomeViewModel {
     private func getInvoiceStatModel() -> StatsModel {
         var barModel = [BarModel]()
         var total = 0
+        var paidAmount = 0
         for status in InvoiceStatus.allCases {
             let (name, color) = status.getTranslation()
             let count = invoiceByStatus[status]?.reduce(0) { $0 + $1.total
@@ -116,12 +117,15 @@ extension HomeViewModel {
                     colour: color
                 )
             )
+            if status == .paid {
+                paidAmount = count ?? 0
+            }
             total += count ?? 0
         }
         
         let title = "Invoice Stats"
         let totalText = "Total Value($ \(total))"
-        let inProgress = "\((invoiceByStatus[InvoiceStatus.paid]?.count ?? 0)) collected"
+        let inProgress = "$\(paidAmount) collected"
         
         return StatsModel(barInfo: barModel, title: title, total: total, totalText: totalText, inProgressText: inProgress, type: .amount)
     }

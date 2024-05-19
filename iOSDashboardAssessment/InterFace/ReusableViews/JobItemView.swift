@@ -56,13 +56,13 @@ struct JobItemView: View {
             let endTime = dateFormatter.string(from: endDate)
             return "today, \(startTime) - \(endTime)"
         } else if calendar.isDate(startDate, inSameDayAs: endDate) {
-            dateFormatter.dateFormat = "dd/MM/yy HH:mm"
+            dateFormatter.dateFormat = "dd/MM/yy, HH:mm"
             let startDateTime = dateFormatter.string(from: startDate)
             dateFormatter.dateFormat = "HH:mm"
             let endTime = dateFormatter.string(from: endDate)
             return "\(startDateTime) - \(endTime)"
         } else {
-            dateFormatter.dateFormat = "dd/MM/yy HH:mm"
+            dateFormatter.dateFormat = "dd/MM/yy, HH:mm"
             let startDateTime = dateFormatter.string(from: startDate)
             let endDateTime = dateFormatter.string(from: endDate)
             return "\(startDateTime) -> \(endDateTime)"
