@@ -42,7 +42,7 @@ class HomeViewModel {
 
 extension HomeViewModel: HomeInterface {
    
-    
+    // gets data from data fetch and populates using combine
     func getData() {
         
         datafetcher
@@ -78,7 +78,7 @@ extension HomeViewModel: HomeInterface {
 
 extension HomeViewModel {
     
-    
+    // creates job statmodel from recieved data
     private func getJobStatModel() -> StatsModel {
         var barModel = [BarModel]()
         var total = 0
@@ -101,7 +101,7 @@ extension HomeViewModel {
         
         return StatsModel(barInfo: barModel, title: title, total: total, totalText: totalText, inProgressText: inProgress, type: .job)
     }
-    
+    // creates invoice statmodel from recieved data
     private func getInvoiceStatModel() -> StatsModel {
         var barModel = [BarModel]()
         var total = 0
@@ -126,7 +126,7 @@ extension HomeViewModel {
         return StatsModel(barInfo: barModel, title: title, total: total, totalText: totalText, inProgressText: inProgress, type: .amount)
     }
     
-    
+    // gets current date string
     private func getCurrentDate() -> String {
         let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "EEEE, MMMM d'\(daySuffix(from: Date())),' yyyy"
@@ -134,6 +134,7 @@ extension HomeViewModel {
         return dateFormatter.string(from: Date())
     }
     
+    // returns the day suffix for the date
     private func daySuffix(from date: Date) -> String {
         let calendar = Calendar.current
         let dayOfMonth = calendar.component(.day, from: date)
@@ -149,6 +150,7 @@ extension HomeViewModel {
 
 extension JobStatus: Translatable {
     
+    // returns translation and colour for jobStatus
     func getTranslation() -> (String, Color) {
         
         switch self {
@@ -169,6 +171,7 @@ extension JobStatus: Translatable {
 
 extension InvoiceStatus: Translatable {
     
+    // returns translation and colour for invoiceStatus
     func getTranslation() -> (String, Color) {
         
         switch self {

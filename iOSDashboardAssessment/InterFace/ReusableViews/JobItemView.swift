@@ -37,6 +37,7 @@ struct JobItemView: View {
         .addWhiteBackgroundAndCorner(cornerRadius: ViewTraits.cornerRadius)
     }
     
+    // formats the dates
     func formatDates(startDateStr: String, endDateStr: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"

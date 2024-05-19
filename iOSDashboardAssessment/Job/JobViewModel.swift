@@ -31,6 +31,7 @@ class JobViewModel: JobInterface {
         self.jobByState = jobByState
     }
     
+    // gets the segments
     func getSegments() {
         
         for state in JobStatus.allCases {
