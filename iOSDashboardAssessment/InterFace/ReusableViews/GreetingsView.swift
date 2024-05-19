@@ -13,6 +13,8 @@ struct GreetingsView: View {
         
         static let sidePadding: CGFloat = 20.0
         static let cornerRadius: CGFloat = 8.0
+        
+        static let imageSize: CGFloat = 50
     }
     
     let model: GreetingsModel
@@ -28,9 +30,9 @@ struct GreetingsView: View {
                     .foregroundStyle(.gray)
             }
             Spacer()
-            Image(systemName: "person")
+            Image("ProfilePhoto")
                 .resizable()
-                .frame(width: 50, height: 50)
+                .frame(width: ViewTraits.imageSize, height: ViewTraits.imageSize)
         }
         .padding()
         .addWhiteBackgroundAndCorner(cornerRadius: ViewTraits.cornerRadius)

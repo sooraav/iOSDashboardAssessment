@@ -11,8 +11,13 @@ struct StatsView: View {
     
     private struct ViewTraits {
         
-        static let sidePadding: CGFloat = 20.0
+        static let sidePadding: CGFloat = 10.0
+        static let titlePadding: CGFloat = 10.0
+        static let splitBarPadding: CGFloat = 10.0
+        
         static let cornerRadius: CGFloat = 8.0
+        
+        static let vStackSpacing: CGFloat = 5.0
     }
     
     let model: StatsModel
@@ -22,10 +27,10 @@ struct StatsView: View {
     ]
     var body: some View {
         
-        VStack(alignment: .center, spacing: 5) {
+        VStack(alignment: .center, spacing: ViewTraits.vStackSpacing) {
             HStack{
                 Text(model.title)
-                    .padding([.leading, .bottom], 10)
+                    .padding([.leading, .bottom], ViewTraits.titlePadding)
                     .foregroundStyle(.black)
                     .bold()
                     .font(.subheadline)
@@ -33,7 +38,7 @@ struct StatsView: View {
             }
             Divider()
             HorizontalSplitBarView(model: model)
-                .padding([.horizontal, .bottom], 10)
+                .padding([.horizontal, .bottom], ViewTraits.splitBarPadding)
             VStack(alignment: .center) {
                 
                 ForEach(0..<model.barInfo.count, id: \.self) { index in
@@ -46,12 +51,9 @@ struct StatsView: View {
                         }
                     }
                 }
-                
-                
             }
-            .padding(.horizontal, 10)
         }
-        .padding(.vertical, 10)
+        .padding(.vertical, ViewTraits.sidePadding)
         .addWhiteBackgroundAndCorner(cornerRadius: ViewTraits.cornerRadius)
         
     }

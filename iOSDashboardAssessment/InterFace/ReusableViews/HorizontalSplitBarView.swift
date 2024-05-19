@@ -9,9 +9,15 @@ import SwiftUI
 
 struct HorizontalSplitBarView: View {
     
+    private struct ViewTraits {
+        static let textBottomPadding: CGFloat = 10
+        
+        static let barHeight: CGFloat = 15
+        static let barCornerRadius: CGFloat = 3.5
+    }
     let model: StatsModel
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: .zero) {
             HStack {
                 Text(model.totalText)
                     .font(.caption)
@@ -23,7 +29,7 @@ struct HorizontalSplitBarView: View {
                     .foregroundStyle(Color(.systemGray))
                     .bold()
             }
-            .padding(.bottom, 5)
+            .padding(.bottom, ViewTraits.textBottomPadding)
             GeometryReader { geometry in
                 HStack(spacing: 0) {
                     ForEach(model.barInfo.sorted(by: {
@@ -35,9 +41,8 @@ struct HorizontalSplitBarView: View {
                     }
                 }
             }
-            .frame(height: 15)
-            .cornerRadius(3.5)
-            .padding(.top, 5)
+            .frame(height: ViewTraits.barHeight)
+            .cornerRadius(ViewTraits.barCornerRadius)
         }
     }
 }

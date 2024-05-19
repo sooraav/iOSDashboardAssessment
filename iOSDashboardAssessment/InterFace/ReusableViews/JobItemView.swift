@@ -9,6 +9,10 @@ import SwiftUI
 import SampleData
 
 struct JobItemView: View {
+    private struct ViewTraits {
+        
+        static let cornerRadius: CGFloat = 10
+    }
     
     let model: JobApiModel
     var body: some View {
@@ -30,7 +34,7 @@ struct JobItemView: View {
             Spacer()
         }
         .padding()
-        .addWhiteBackgroundAndCorner(cornerRadius: 10)
+        .addWhiteBackgroundAndCorner(cornerRadius: ViewTraits.cornerRadius)
     }
     
     func formatDates(startDateStr: String, endDateStr: String) -> String {
