@@ -87,5 +87,5 @@ let barInfo = [BarModel(name: "Hello (%d)", count: 10, colour: .red),
 ]
 
 #Preview {
-    StatsView(model: StatsModel(barInfo: barInfo, title: "Job Stats", total: 10, totalText: "total Text", inProgressText: "inProgressText"))
+    StatsView(model: StatsModel(barInfo: barInfo, title: "Job Stats", total: 10, totalText: "total Text", inProgressText: "inProgressText", type: .job))
 }

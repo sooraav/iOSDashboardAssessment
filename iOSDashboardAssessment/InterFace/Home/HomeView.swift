@@ -24,6 +24,7 @@ struct HomeView <Model>: View where Model: HomeInterface {
                                 
                                 StatsView(model: statsModel)
                             }
+                            .disabled(statsModel.type == .amount)
                         }
                         Spacer()
                     }

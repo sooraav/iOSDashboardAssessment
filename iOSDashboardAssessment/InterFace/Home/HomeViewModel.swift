@@ -99,7 +99,7 @@ extension HomeViewModel {
         let totalText =  "\(total) Jobs"
         let inProgress = "\(jobByStatus[JobStatus.completed]?.count ?? 0) of \(total) completed"
         
-        return StatsModel(barInfo: barModel, title: title, total: total, totalText: totalText, inProgressText: inProgress)
+        return StatsModel(barInfo: barModel, title: title, total: total, totalText: totalText, inProgressText: inProgress, type: .job)
     }
     
     private func getInvoiceStatModel() -> StatsModel {
@@ -123,7 +123,7 @@ extension HomeViewModel {
         let totalText = "Total Value($ \(total))"
         let inProgress = "\((invoiceByStatus[InvoiceStatus.paid]?.count ?? 0)) collected"
         
-        return StatsModel(barInfo: barModel, title: title, total: total, totalText: totalText, inProgressText: inProgress)
+        return StatsModel(barInfo: barModel, title: title, total: total, totalText: totalText, inProgressText: inProgress, type: .amount)
     }
     
     

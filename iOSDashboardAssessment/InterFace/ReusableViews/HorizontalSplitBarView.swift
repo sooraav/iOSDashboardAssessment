@@ -43,5 +43,5 @@ struct HorizontalSplitBarView: View {
 }
 
 #Preview {
-    HorizontalSplitBarView(model: StatsModel(barInfo: barInfo, title: "Job Stats", total: 10, totalText: "total Text", inProgressText: "inProgressText"))
+    HorizontalSplitBarView(model: StatsModel(barInfo: barInfo, title: "Job Stats", total: 10, totalText: "total Text", inProgressText: "inProgressText", type: .job))
 }

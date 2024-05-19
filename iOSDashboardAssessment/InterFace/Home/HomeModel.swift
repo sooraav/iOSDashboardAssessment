@@ -20,6 +20,7 @@ struct StatsModel: Identifiable {
     let total: Int
     let totalText: String
     let inProgressText: String
+    let type: StatType
 }
 
 struct BarModel {

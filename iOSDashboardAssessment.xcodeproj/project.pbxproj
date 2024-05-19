@@ -21,7 +21,6 @@
 		21E69BD42BF8D06E00297C45 /* JobItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BD32BF8D06E00297C45 /* JobItemView.swift */; };
 		21E69BD62BF9D72600297C45 /* AddWhiteBackgroundAndCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E69BD52BF9D72600297C45 /* AddWhiteBackgroundAndCorner.swift */; };
 		3AC597562BF4D05C0092606C /* iOSDashboardAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */; };
-		3AC597582BF4D05C0092606C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC597572BF4D05C0092606C /* ContentView.swift */; };
 		3AC5975A2BF4D05D0092606C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC597592BF4D05D0092606C /* Assets.xcassets */; };
 		3AC5975D2BF4D05D0092606C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC5975C2BF4D05D0092606C /* Preview Assets.xcassets */; };
 		3AC597672BF4D1040092606C /* SampleData in Frameworks */ = {isa = PBXBuildFile; productRef = 3AC597662BF4D1040092606C /* SampleData */; };
@@ -43,7 +42,6 @@
 		21E69BD52BF9D72600297C45 /* AddWhiteBackgroundAndCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWhiteBackgroundAndCorner.swift; sourceTree = "<group>"; };
 		3AC597522BF4D05C0092606C /* iOSDashboardAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDashboardAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDashboardAssessmentApp.swift; sourceTree = "<group>"; };
-		3AC597572BF4D05C0092606C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3AC597592BF4D05D0092606C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AC5975C2BF4D05D0092606C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3AC597642BF4D0B40092606C /* SampleData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SampleData; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				3AC597552BF4D05C0092606C /* iOSDashboardAssessmentApp.swift */,
-				3AC597572BF4D05C0092606C /* ContentView.swift */,
 				21E69BB62BF6710000297C45 /* Infrastructure */,
 				21E69BB52BF670EA00297C45 /* InterFace */,
 				21E69BCA2BF8BAB600297C45 /* Job */,
@@ -240,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				21E69BB92BF6712F00297C45 /* HomeView.swift in Sources */,
-				3AC597582BF4D05C0092606C /* ContentView.swift in Sources */,
 				21E69BC72BF7BBF600297C45 /* StatsView.swift in Sources */,
 				21E69BC92BF7BC3200297C45 /* HorizontalSplitBarView.swift in Sources */,
 				21E69BCC2BF8BAD600297C45 /* JobView.swift in Sources */,
