@@ -154,7 +154,7 @@ extension JobStatus: Translatable {
         switch self {
             
         case .yetToStart:
-            return ("Yet to Start (%d)", .purple)
+            return ("Yet to start (%d)", .purple)
         case .inProgress:
             return ("In-Progress (%d)", .cyan)
         case .canceled:

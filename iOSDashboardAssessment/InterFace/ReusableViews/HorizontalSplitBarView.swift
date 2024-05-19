@@ -14,15 +14,16 @@ struct HorizontalSplitBarView: View {
         VStack(spacing: 0) {
             HStack {
                 Text(model.totalText)
-                    .font(.subheadline)
+                    .font(.caption)
                     .foregroundStyle(Color(.systemGray))
                     .bold()
                 Spacer()
                 Text(model.inProgressText)
-                    .font(.subheadline)
+                    .font(.caption)
                     .foregroundStyle(Color(.systemGray))
                     .bold()
             }
+            .padding(.bottom, 5)
             GeometryReader { geometry in
                 HStack(spacing: 0) {
                     ForEach(model.barInfo.sorted(by: {

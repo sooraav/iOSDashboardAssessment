@@ -21,39 +21,62 @@ struct StatsView: View {
         GridItem(.flexible())
     ]
     var body: some View {
-       
-        VStack(alignment: .leading, spacing: 5){
-            Text(model.title)
-                .padding(.leading, 10)
-                .foregroundStyle(.black)
-                .bold()
-                .font(.subheadline)
+        
+        VStack(alignment: .center, spacing: 5) {
+            HStack{
+                Text(model.title)
+                    .padding([.leading, .bottom], 10)
+                    .foregroundStyle(.black)
+                    .bold()
+                    .font(.subheadline)
+                Spacer()
+            }
             Divider()
             HorizontalSplitBarView(model: model)
-                .padding(.horizontal, 10)
-            LazyVGrid(columns: columns) {
-        
-                ForEach(model.barInfo, id: \.name) { barInfo in
-                    if let count = barInfo.count {
+                .padding([.horizontal, .bottom], 10)
+            VStack(alignment: .center) {
+                
+                ForEach(0..<model.barInfo.count, id: \.self) { index in
+                    if index % 2 == 0 {
                         HStack {
-                            barInfo.colour
-                                .frame(width: 10, height: 10)
-                                .cornerRadius(2.5)
-                            Text(String(format: barInfo.name, count))
-                                .foregroundStyle(Color(.systemGray))
-                                .bold()
-                                .font(.caption)
-                            
+                            BarKeyView(barInfo: model.barInfo[index])
+                            if index + 1 < model.barInfo.count {
+                                BarKeyView(barInfo: model.barInfo[index + 1])
+                            }
                         }
                     }
-                    
                 }
+                
                 
             }
             .padding(.horizontal, 10)
         }
         .padding(.vertical, 10)
         .addWhiteBackgroundAndCorner(cornerRadius: ViewTraits.cornerRadius)
+        
+    }
+}
+
+struct BarKeyView: View {
+    
+    
+    var barInfo: BarModel
+    var body: some View {
+        VStack {
+            if let count = barInfo.count {
+                
+                HStack {
+                    barInfo.colour
+                        .frame(width: 10, height: 10)
+                        .cornerRadius(2.5)
+                    Text(String(format: barInfo.name, count))
+                        .foregroundStyle(Color(.systemGray))
+                        .bold()
+                        .font(.caption)
+                    
+                }
+            }
+        }
         
     }
 }
