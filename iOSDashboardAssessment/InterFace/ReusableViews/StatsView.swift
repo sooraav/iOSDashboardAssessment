@@ -22,20 +22,27 @@ struct StatsView: View {
     ]
     var body: some View {
        
-        VStack(alignment: .leading){
+        VStack(alignment: .leading, spacing: 5){
             Text(model.title)
                 .padding(.leading, 10)
+                .foregroundStyle(.black)
+                .bold()
+                .font(.subheadline)
             Divider()
             HorizontalSplitBarView(model: model)
+                .padding(.horizontal, 10)
             LazyVGrid(columns: columns) {
         
                 ForEach(model.barInfo, id: \.name) { barInfo in
                     if let count = barInfo.count {
                         HStack {
                             barInfo.colour
-                                .frame(width: 20, height: 20)
-                                .cornerRadius(5)
+                                .frame(width: 10, height: 10)
+                                .cornerRadius(2.5)
                             Text(String(format: barInfo.name, count))
+                                .foregroundStyle(Color(.systemGray))
+                                .bold()
+                                .font(.caption)
                             
                         }
                     }
@@ -43,13 +50,10 @@ struct StatsView: View {
                 }
                 
             }
+            .padding(.horizontal, 10)
         }
-        .padding()
-        .clipShape(RoundedRectangle(cornerRadius: ViewTraits.cornerRadius))
-        .overlay {
-            RoundedRectangle(cornerRadius: ViewTraits.cornerRadius)
-                .strokeBorder(Color.black)
-        }
+        .padding(.vertical, 10)
+        .addWhiteBackgroundAndCorner(cornerRadius: ViewTraits.cornerRadius)
         
     }
 }

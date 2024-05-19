@@ -11,11 +11,17 @@ struct HorizontalSplitBarView: View {
     
     let model: StatsModel
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             HStack {
                 Text(model.totalText)
+                    .font(.subheadline)
+                    .foregroundStyle(Color(.systemGray))
+                    .bold()
                 Spacer()
                 Text(model.inProgressText)
+                    .font(.subheadline)
+                    .foregroundStyle(Color(.systemGray))
+                    .bold()
             }
             GeometryReader { geometry in
                 HStack(spacing: 0) {
@@ -28,8 +34,9 @@ struct HorizontalSplitBarView: View {
                     }
                 }
             }
-            .frame(height: 20)
-            .cornerRadius(5)
+            .frame(height: 15)
+            .cornerRadius(3.5)
+            .padding(.top, 5)
         }
     }
 }

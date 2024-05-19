@@ -12,7 +12,7 @@ struct HomeView <Model>: View where Model: HomeInterface {
     @StateObject var viewModel: Model
     var body: some View {
         NavigationStack {
-            NavigationView {
+                ScrollView(.vertical) {
                     VStack {
                         if let greeting = viewModel.greeting {
                             GreetingsView(model: greeting)
@@ -28,10 +28,9 @@ struct HomeView <Model>: View where Model: HomeInterface {
                         Spacer()
                     }
                     .padding(20)
-                    .background(Color(.systemGray6))
                     
-                
-            }
+                }
+                .background(Color(.systemGray6))
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     VStack {

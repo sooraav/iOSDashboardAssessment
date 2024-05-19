@@ -12,12 +12,25 @@ struct JobItemView: View {
     
     let model: JobApiModel
     var body: some View {
-        
-        VStack(alignment: .leading) {
-            Text("#\(model.jobNumber)")
-            Text(model.title)
-            Text(formatDates(startDateStr:model.startTime, endDateStr:model.endTime))
+        HStack {
+            VStack(alignment: .leading) {
+                Text("#\(model.jobNumber)")
+                    .font(.headline)
+                    .foregroundStyle(.gray)
+                    .bold()
+                
+                Text(model.title)
+                    .font(.headline)
+                    .bold()
+                Text(formatDates(startDateStr:model.startTime, endDateStr:model.endTime))
+                    .font(.subheadline)
+                    .foregroundStyle(.gray)
+                    .bold()
+            }
+            Spacer()
         }
+        .padding()
+        .addWhiteBackgroundAndCorner(cornerRadius: 10)
     }
     
     func formatDates(startDateStr: String, endDateStr: String) -> String {

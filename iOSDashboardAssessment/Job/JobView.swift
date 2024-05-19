@@ -17,6 +17,7 @@ struct JobView<Model>: View where Model: JobInterface {
             VStack(alignment: .leading) {
                 Divider()
                 HorizontalSplitBarView(model: viewModel.statsModel)
+                    .padding(20)
                 Divider()
                 if let selected = viewModel.selected {
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -29,6 +30,7 @@ struct JobView<Model>: View where Model: JobInterface {
                                 JobItemView(model: item)
                             }
                         }
+                        .padding(.horizontal, 15)
                     }
                 }
             }

@@ -33,11 +33,8 @@ struct GreetingsView: View {
                 .frame(width: 50, height: 50)
         }
         .padding()
-        .clipShape(RoundedRectangle(cornerRadius: ViewTraits.cornerRadius))
-        .overlay {
-            RoundedRectangle(cornerRadius: ViewTraits.cornerRadius)
-                .strokeBorder(Color.black)
-        }
+        .addWhiteBackgroundAndCorner(cornerRadius: ViewTraits.cornerRadius)
+        
     }
 }
 
